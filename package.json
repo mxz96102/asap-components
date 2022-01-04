@@ -1,0 +1,12 @@
+{
+  "name": "asap-components",
+  "version": "1.0.0",
+  "description": "we need these component ASAP!!!",
+  "main": "index.js",
+  "repository": "https://github.com/mxz96102/asap-components.git",
+  "author": "Dominic Ming <mxz96102@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^2.63.0"
+  }
+}
