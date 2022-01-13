@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
+import { ASAPComponent } from "../template";
 
-class ASAPTime extends HTMLElement {
+class ASAPTime extends ASAPComponent {
   getTime() {
     const format = this.getAttribute("format") || "YYYY-MM-DD HH:mm:ss";
     let time = this.getAttribute("time");
@@ -13,23 +14,11 @@ class ASAPTime extends HTMLElement {
     const result = dayjs(time).format(format);
     return result;
   }
-  constructor() {
-    super();
-    const result = this.getTime();
-    const shadow = this.attachShadow({
-      mode: "closed"
-    });
-    this.element = document.createElement("span");
-    this.element.textContent = result;
-    shadow.appendChild(this.element);
+
+  render() {
+    this.element.textContent = this.getTime()
   }
   static get observedAttributes() {return ['format', 'name']; }
-  attributeChangedCallback(name) {
-    if (['format', 'time'].includes(name)) {
-      const result = this.getTime();
-      this.element.textContent = result;
-    }
-  }
 }
 
 if (!customElements.get('asap-time')) {

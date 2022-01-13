@@ -1,5 +1,5 @@
 const dependencies = {
-  'ASAP-TIME': 'time.min.js'
+  'ASAP-TIME': 'time.min.js',
 }
 
 window.addEventListener('load', () => {

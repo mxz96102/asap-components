@@ -1,18 +1,23 @@
 {
   "name": "asap-components",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "custom component that using directly to html",
   "repository": "https://github.com/mxz96102/asap-components.git",
   "author": "Dominic Ming <mxz96102@qq.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack --mode production --watch"
+    "start": "webpack --watch",
+    "build": "webpack --mode production"
   },
   "devDependencies": {
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
-    "dayjs": "^1.10.7"
+    "@antv/g": "^5.0.6",
+    "@antv/g-canvas": "^1.0.5",
+    "@antv/g-webgl": "^1.0.8",
+    "dayjs": "^1.10.7",
+    "lodash": "^4.17.21"
   }
 }

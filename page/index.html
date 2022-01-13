@@ -3,19 +3,31 @@
 <head>
   <title>ASAP COMPONENT</title>
   <script>
-    // window.asapSource = '../lib/'
+    window.asapSource = '../lib/'
   </script>
-  <script src="http://unpkg.com/asap-components/lib/asap-loader.min.js"></script>
+  <script src="../lib/asap-loader.min.js"></script>
+  <script src="../lib/gcanvas.min.js"></script>
   <style>
     asap-time {
-      color: #484bff;
+      color: #66ccff;
       font-family: monospace;
       font-weight: bold;
       font-size: 20px;
+    }
+    g-canvas {
+      border: solid 2px rgba(128, 128, 128, 0.2);
     }
   </style>
 </head>
 
 <body>
   <asap-time id="time"></asap-time>
+  <g-canvas style="width: 100%; height: 600px;display: block;">
+    <g-circle x="100" y="150" r="20" fill="#69c0ff">
+      <g-rect fill="#2f54eb" width="200" height="25">
+        <g-text y="16" x="3" fill="#fff" text="我在canvas上，chao勇der"></g-text>
+      </g-rect>
+    </g-circle>
+    <g-circle x="220" y="250" r="20" fill="red"></g-circle>
+  </g-canvas>
 </body>
